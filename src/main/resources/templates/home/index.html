@@ -8,10 +8,6 @@
 <body>
 <h1>Album list</h1>
 
-<a href="/create">
-    <button class="btn-create, btn" id="btn-create">Insert album to Database</button>
-</a>
-
 <table>
     <thead>
     <tr>
@@ -32,6 +28,10 @@
         <td th:text="${album.releaseYear}"/>
     </tr>
     </tbody>
+
+    <a href="/create">
+        <button class="btn-create, btn" id="btn-create">Insert album to Database</button>
+    </a>
 
 </table>
 </body>
