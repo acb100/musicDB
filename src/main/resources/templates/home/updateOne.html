@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update an album</title>
+</head>
+<body>
+<h1>Update album info</h1>
+
+<form action="/updateAlbum" method="post">
+    <input type="text" name="id" th:value="${album.id}">
+    <input type="text" name="artistName" th:value="${album.artistName}">
+    <input type="text" name="albumTitle" th:value="${album.albumTitle}">
+    <input type="text" name="songName" th:value="${album.songName}">
+    <input type="text" name="releaseYear" th:value="${album.releaseYear}">
+    <button type="submit" value="Save changes" style="background-color: #4CAF50"></button>
+</form>
+</body>
+</html>

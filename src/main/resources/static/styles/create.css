@@ -1,0 +1,4 @@
+.formArtist {
+    display: flex;
+    flex-direction: column;
+}

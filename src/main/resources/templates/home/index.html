@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Music Database</title>
-    <link rel="stylesheet" type="text/css" href="/styles/style.css">
+    <link rel="stylesheet" type="text/css" href="/styles/index.css">
 </head>
 <body>
 <h1>Album list</h1>
@@ -16,16 +16,28 @@
         <th>Album Title</th>
         <th>Song Name</th>
         <th>Release Year</th>
+        <th>Actions</th>
     </tr>
     </thead>
 
     <tbody>
     <tr th:each="album: ${albums}">
-        <td th:text="${album.id}"/>
-        <td th:text="${album.artistName}"/>
-        <td th:text="${album.albumTitle}"/>
-        <td th:text="${album.songName}"/>
-        <td th:text="${album.releaseYear}"/>
+        <td th:text="${album.id}"></td>
+        <td th:text="${album.artistName}"></td>
+        <td th:text="${album.albumTitle}"></td>
+        <td th:text="${album.songName}"></td>
+        <td th:text="${album.releaseYear}"></td>
+        <td>
+            <a th:href="@{'/viewOne/'+${album.id}}">
+                <button class="btn-viewOne" id="btn-viewOne">View an album</button>
+            </a>
+            <a th:href="@{'/deleteOne/'+${album.id}}">
+                <button class="btn-deleteOne" id="btn-deleteOne">Delete an album</button>
+            </a>
+            <a th:href="@{'/updateOne/'+${album.id}}">
+                <button class="btn-updateOne" id="btn-updateOne">Update an album</button>
+            </a>
+        </td>
     </tr>
     </tbody>
 

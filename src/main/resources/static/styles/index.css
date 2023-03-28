@@ -22,6 +22,7 @@ tr:nth-child(even) {
     color: white;
     padding: 7px 10px;
     text-align: center;
+    border-radius: 10px;
 }
 
 .btn:hover {
@@ -31,4 +32,16 @@ tr:nth-child(even) {
 #btn-create {
     margin-bottom: 10px;
     background-color: green;
+}
+
+#btn-viewOne {
+    background-color: #4CAF50;
+}
+
+#btn-deleteOne {
+    background-color: red;
+}
+
+#btn-updateOne {
+    background-color: deepskyblue;
 }
